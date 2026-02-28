@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - SmartSupport</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a class="logo" href="../index.html">SmartSupport</a>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="scholarship.html">Scholarships</a></li>
+      <li><a href="applications.html">My Applications</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a id="nav-login" class="active nav-cta" href="login.html">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="auth-sec">
+  <div class="auth-card">
+    <h2>Welcome Back 👋</h2>
+    <p class="auth-sub">Login to continue your scholarship journey</p>
+
+    <div style="background:#fff7e0;border:1px solid #f5a623;border-radius:10px;padding:12px 16px;margin-bottom:20px;font-size:0.85rem;color:#7a5000;">
+      <strong>Demo Credentials:</strong><br>
+      👨‍🎓 Student: student@gmail.com / 12345<br>
+      🔧 Admin: admin@gmail.com / admin123
+    </div>
+
+    <form id="loginForm">
+      <div class="fg"><label>Email</label><input type="email" id="log-email" placeholder="you@email.com" required></div>
+      <div class="fg"><label>Password</label><input type="password" id="log-pass" placeholder="Your password" required></div>
+      <button type="submit" class="btn-submit">Login →</button>
+      <div class="msg-box" id="log-msg"></div>
+    </form>
+    <p class="auth-link"><a href="forget.html">Forgot password?</a></p>
+    <p class="auth-link">Don't have an account? <a href="register.html">Register here</a></p>
+  </div>
+</section>
+
+<div class="toast" id="toast"></div>
+
+<script src="../js/db.js"></script>
+<script src="../js/login.js"></script>
+</body>
+</html>

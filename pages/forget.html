@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forgot Password - SmartSupport</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/otp.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a class="logo" href="../index.html">SmartSupport</a>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="scholarship.html">Scholarships</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="login.html" class="nav-cta">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="auth-sec">
+  <div class="auth-card small-card">
+    <h2>Forgot Password? 🔐</h2>
+    <p class="auth-sub">Enter your email and we'll send an OTP to reset your password.</p>
+    <form id="forgetForm">
+      <div class="fg"><label>Registered Email</label><input type="email" id="forget-email" placeholder="you@email.com" required></div>
+      <button type="submit" class="btn-submit">Send OTP</button>
+      <div class="msg-box" id="forget-msg"></div>
+    </form>
+    <p class="auth-link"><a href="login.html">← Back to Login</a></p>
+  </div>
+</section>
+
+<div class="toast" id="toast"></div>
+
+<script src="../js/db.js"></script>
+<script src="../js/forget.js"></script>
+</body>
+</html>

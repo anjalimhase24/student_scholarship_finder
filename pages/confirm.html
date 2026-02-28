@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application Submitted - SmartSupport</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/confirm.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a class="logo" href="../index.html">SmartSupport</a>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="scholarship.html">Scholarships</a></li>
+      <li><a href="applications.html">My Applications</a></li>
+      <li><a href="login.html" class="nav-cta">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="confirm-sec">
+  <div class="confirm-card">
+    <div class="confirm-icon">🎉</div>
+    <h2>Application Submitted!</h2>
+    <p>Your scholarship application has been received successfully.</p>
+    <div class="confirm-id" id="confirm-appid">APP-LOADING...</div>
+    <p style="font-size:0.88rem;color:#6b7280;">Save this Application ID for future reference.<br>Status will be updated within 7–10 working days.</p>
+    <div class="confirm-btns">
+      <a class="btn-gold" href="applications.html">View My Applications</a>
+      <a class="btn-ghost" href="../index.html" style="background:transparent;border:2px solid rgba(10,22,40,0.2);color:#0a1628;">Back to Home</a>
+    </div>
+  </div>
+</section>
+
+<div class="toast" id="toast"></div>
+
+<script src="../js/db.js"></script>
+<script src="../js/confirm.js"></script>
+</body>
+</html>

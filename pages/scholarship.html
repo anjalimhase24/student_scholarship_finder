@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scholarships - SmartSupport</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/scholarship.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a class="logo" href="../index.html">SmartSupport</a>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a id="nav-scholarships" class="active" href="scholarship.html">Scholarships</a></li>
+      <li><a href="applications.html">My Applications</a></li>
+      <li><a href="admin.html">Admin</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="login.html" class="nav-cta">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="schpage-sec">
+  <div class="sch-hero">
+    <h1>Maharashtra Scholarships 🎓</h1>
+    <p>Government-backed financial support for deserving students across Maharashtra</p>
+  </div>
+  <div class="sch-grid" id="schPageGrid"></div>
+</section>
+
+<footer class="footer">
+  <div class="footer-bottom"><p>© 2025 Smart Student Support — Maharashtra Scholarships Portal</p></div>
+</footer>
+
+<!-- SCHOLARSHIP MODAL -->
+<div class="modal-overlay" id="schModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h3 id="m-title"></h3>
+    <div class="modal-row"><strong>Eligibility:</strong> <span id="m-el"></span></div>
+    <div class="modal-row"><strong>Benefits:</strong> <span id="m-ben"></span></div>
+    <div class="modal-row"><strong>Category:</strong> <span id="m-cat"></span></div>
+    <br>
+    <button class="btn-submit" id="modal-apply-btn">Proceed to Apply →</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="../js/db.js"></script>
+<script src="../js/scholarship.js"></script>
+</body>
+</html>

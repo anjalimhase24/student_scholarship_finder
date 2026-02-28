@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Applications - SmartSupport</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/applications.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a class="logo" href="../index.html">SmartSupport</a>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="scholarship.html">Scholarships</a></li>
+      <li><a id="nav-myapps" class="active" href="applications.html">My Applications</a></li>
+      <li><a href="apply.html">Apply Now</a></li>
+      <li><a href="login.html" class="nav-cta">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="myapp-sec">
+  <h2>My Applications 📂</h2>
+  <p class="info">Below is the complete history of all scholarship applications submitted by you.</p>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>App ID</th>
+          <th>Scholarship Name</th>
+          <th>Academic Year</th>
+          <th>Category</th>
+          <th>Status</th>
+          <th>Applied Date</th>
+        </tr>
+      </thead>
+      <tbody id="myAppTbody"></tbody>
+    </table>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-bottom"><p>© 2025 Smart Student Support</p></div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="../js/db.js"></script>
+<script src="../js/my-applications.js"></script>
+</body>
+</html>

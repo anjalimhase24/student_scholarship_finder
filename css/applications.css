@@ -1,0 +1,12 @@
+/* ══════════ MY APPLICATIONS PAGE ══════════ */
+.myapp-sec{padding:100px 6% 60px;background:#fdf8f0;}
+.myapp-sec h2{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:900;color:#0a1628;margin-bottom:6px;}
+.myapp-sec p.info{color:#6b7280;font-size:0.92rem;margin-bottom:28px;}
+.empty-state{text-align:center;padding:60px 20px;color:#9aaabe;}
+.empty-state .e-icon{font-size:3.5rem;margin-bottom:16px;}
+.empty-state h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:#0a1628;margin-bottom:8px;}
+.empty-state p{font-size:0.95rem;}
+
+@media(max-width:768px){
+  .myapp-sec{padding:90px 4% 50px;}
+}
