@@ -57,7 +57,6 @@ const DIST = {
 const STATES = ['Maharashtra', 'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal', 'Delhi', 'Jammu & Kashmir', 'Ladakh', 'Puducherry'];
 
 // ── LOCAL STORAGE HELPERS ─────────────
-function
 function getUsers() { return JSON.parse(localStorage.getItem('ss_users') || '[]'); }
 function saveUsers(u) { localStorage.setItem('ss_users', JSON.stringify(u)); }
 function getApps() { return JSON.parse(localStorage.getItem('ss_apps') || '[]'); }
