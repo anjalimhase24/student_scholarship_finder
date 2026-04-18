@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="../css/apply.css">
 </head>
 <body>
-
 <header class="navbar">
   <a class="logo" href="../index.html">SmartSupport</a>
   <nav>
@@ -21,14 +20,11 @@
     </ul>
   </nav>
 </header>
-
 <section class="apply-sec">
   <div class="apply-card">
     <h2>Scholarship Application Form 📋</h2>
     <p class="sub">Fill in all details carefully. All fields are required.</p>
-
     <form id="applyForm">
-
       <div class="form-sec-title">👤 Personal Details</div>
       <div class="form-row">
         <div class="fg"><label>Full Name</label><input type="text" id="a-name" placeholder="Full Name" required></div>
@@ -49,7 +45,6 @@
           <option>SC</option><option>ST</option><option>OBC</option><option>VJNT</option><option>General</option><option>Minority</option>
         </select>
       </div>
-
       <div class="form-sec-title">🎓 Education Details</div>
       <div class="form-row">
         <div class="fg"><label>Course</label>
@@ -77,7 +72,6 @@
           <option>Above ₹5,00,000</option>
         </select>
       </div>
-
       <div class="form-sec-title">📄 Scholarship Details</div>
       <div class="fg"><label>Select Scholarship</label>
         <select id="a-schname" required>
@@ -92,28 +86,22 @@
           <option>Savitribai Phule Scholarship</option>
         </select>
       </div>
-
       <div class="form-sec-title">🏦 Bank Details</div>
       <div class="form-row">
         <div class="fg"><label>Account Number</label><input type="text" id="a-acc" placeholder="Bank Account No." required></div>
         <div class="fg"><label>IFSC Code</label><input type="text" id="a-ifsc" placeholder="e.g. SBIN0001234" required></div>
       </div>
-
       <div class="form-sec-title">🏠 Address</div>
       <div class="fg"><label>Permanent Address</label><textarea id="a-addr" placeholder="Village/Town, Taluka, District, Maharashtra" required></textarea></div>
-
       <button type="submit" class="btn-submit" style="margin-top:12px;">Submit Application 🚀</button>
       <div class="msg-box" id="apply-msg"></div>
     </form>
   </div>
 </section>
-
 <footer class="footer">
   <div class="footer-bottom"><p>© 2025 Smart Student Support</p></div>
 </footer>
-
 <div class="toast" id="toast"></div>
-
 <script src="../js/db.js"></script>
 <script src="../js/apply.js"></script>
 </body>
