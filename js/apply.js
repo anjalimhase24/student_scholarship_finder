@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // Guard: must be logged in
-  const cu = JSON.parse(localStorage.getItem('currentUser') || 'null');
+  const cu = getCurrentUser();
   if (!cu) {
     showToast('Please login first! 🔐', 'error');
     window.location.href = 'login.html';
@@ -29,12 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Submit application
   const form = document.getElementById('applyForm');
   if (form) {
-    form.addEventListener('submit', async function (e) {
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
       const appId = 'APP' + Date.now();
       const app = {
         appId,
-        userEmail : cu.email,
+        userEmail : cu,
         name      : document.getElementById('a-name').value,
         gender    : document.getElementById('a-gender').value,
         dob       : document.getElementById('a-dob').value,
@@ -52,28 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
         appliedDate: new Date().toLocaleString(),
       };
 
-      try {
-        const response = await fetch('/api/applications', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(app)
-        });
-        const data = await response.json();
+      let apps = getApps();
+      apps.push(app);
+      saveApps(apps);
 
-        if (data.success) {
-          // Save appId for confirm page
-          sessionStorage.setItem('lastAppId', appId);
+      // Save appId for confirm page
+      sessionStorage.setItem('lastAppId', appId);
 
-          form.reset();
-          showToast('Application submitted! 🚀', 'success');
-          window.location.href = 'confirm.html';
-        } else {
-          showToast('Error submitting application.', 'error');
-        }
-      } catch (error) {
-        console.error('Error:', error);
-        showToast('Network error.', 'error');
-      }
+      form.reset();
+      showToast('Application submitted! 🚀', 'success');
+      window.location.href = 'applications.html';
     });
   }
 });

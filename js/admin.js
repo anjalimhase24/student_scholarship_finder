@@ -33,6 +33,18 @@ function renderAdmin() {
   const countEl = document.getElementById('admin-count');
   if (countEl) countEl.textContent = `Showing ${apps.length} application(s)`;
 
+  // Update statistics
+  const allApps = getApps();
+  const totalEl = document.getElementById('total-apps');
+  const pendingEl = document.getElementById('pending-apps');
+  const approvedEl = document.getElementById('approved-apps');
+  const rejectedEl = document.getElementById('rejected-apps');
+
+  if (totalEl) totalEl.textContent = allApps.length;
+  if (pendingEl) pendingEl.textContent = allApps.filter(a => a.status === 'Pending').length;
+  if (approvedEl) approvedEl.textContent = allApps.filter(a => a.status === 'Approved').length;
+  if (rejectedEl) rejectedEl.textContent = allApps.filter(a => a.status === 'Rejected').length;
+
   const tbody = document.getElementById('adminTbody');
   if (!tbody) return;
 

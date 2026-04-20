@@ -1,40 +1,10 @@
-# Student Scholarship Finder
+# SmartSupport - Maharashtra Scholarship Portal
 
-A web application for students to apply for scholarships with SQL database backend.
-
-## Setup
-
-1. Install dependencies:
-   ```
-   npm install
-   ```
-
-2. Start the server:
-   ```
-   npm start
-   ```
-
-3. Open http://localhost:3000 in browser.
-
-## Features
-
-- User registration and login
-- Scholarship application submission
-- View application history
-- Admin panel (for admin users)
-- SQLite database for data persistence
-
-## Database
-
-Uses SQLite with tables:
-- users: id, name, email, password, role
-- applications: id, appId, userEmail, name, gender, dob, aadhar, category, course, year, college, income, schName, acc, ifsc, addr, status, appliedDate
-
-Seed data is automatically inserted on first run.
+A complete web-based scholarship management system for Maharashtra students. Built with pure HTML, CSS, and JavaScript using localStorage as a database.
 
 ---
 
-## Old Project Structure (localStorage version)
+## Project Structure
 
 ```
 smartsupport/
@@ -74,6 +44,8 @@ smartsupport/
     |-- applications.html       (Student's application history)
     |-- admin.html              (Admin dashboard)
 ```
+
+---
 
 ## How to Run
 

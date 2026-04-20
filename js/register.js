@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Register form submit
   const form = document.getElementById('registerForm');
   if (form) {
-    form.addEventListener('submit', async function (e) {
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
       const name  = document.getElementById('reg-name').value.trim();
       const email = document.getElementById('reg-email').value.trim();
@@ -38,33 +38,21 @@ document.addEventListener('DOMContentLoaded', () => {
         msg.textContent = 'Passwords do not match ❌';
         return;
       }
-
-      try {
-        const response = await fetch('/api/users', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name, email, password: pass, role: 'student' })
-        });
-        const data = await response.json();
-
-        if (data.success) {
-          msg.style.color = '#15803d';
-          msg.textContent = 'Registration Successful! Redirecting... 🎉';
-          showToast('Account created successfully! 🎉', 'success');
-          setTimeout(() => {
-            form.reset();
-            window.location.href = 'login.html';
-          }, 1500);
-        } else {
-          msg.style.color = '#b91c1c';
-          msg.textContent = data.message || 'Registration failed ❌';
-          showToast('Registration failed.', 'error');
-        }
-      } catch (error) {
+      let users = getUsers();
+      if (users.find(u => u.email === email)) {
         msg.style.color = '#b91c1c';
-        msg.textContent = 'Network error ❌';
-        showToast('Network error.', 'error');
+        msg.textContent = 'Email already registered! ❌';
+        return;
       }
+      users.push({ name, email, password: pass, role: 'student' });
+      saveUsers(users);
+      msg.style.color = '#15803d';
+      msg.textContent = 'Registration Successful! Redirecting... 🎉';
+      showToast('Account created successfully! 🎉', 'success');
+      setTimeout(() => {
+        form.reset();
+        window.location.href = 'login.html';
+      }, 1500);
     });
   }
 });
